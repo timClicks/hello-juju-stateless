@@ -19,7 +19,4 @@ COPY . /app
 
 WORKDIR /app
 
-#ENV FLASK_APP app.py
-#CMD ["flask", "run"]
-
 CMD ["gunicorn", "--bind=0.0.0.0", "hello_juju:app"]
